@@ -1,0 +1,62 @@
+<div class="new-cook">
+    <div class="container">
+        <div class="new-cook-wrapper">
+            <%= form_with(model: @cook) do |f|%>
+            <%= render("shared/error_message", model: f.object) %>
+                <div class="new-cook-line">
+                    <p><%= f.label :image, "-完成品-"%></p>
+                    <p><%= f.file_field :image, class:"text-field" %></p>
+                </div>
+                <div class="new-cook-line">
+                    <p><%= f.label :name, "-料理名-" %></p>
+                    <p><%= f.text_field :name, class:"text-field",
+                        placeholder: "例: 肉じゃが" %></p>
+                </div>
+                <div class="new-cook-line">
+                    <p><%= f.label :material, "-材料-" %></p>
+                    <p><%= f.text_area :material, class:"text-field area",
+                        placeholder: "例:
+・醤油 大さじ２☆
+・砂糖 大さじ１☆
+・調理酒 大さじ2☆
+・みりん 大さじ2☆
+・水 200ml☆
+・牛肉 200g
+・じゃがいも 2個
+・にんじん 1個
+・玉ねぎ 1個"
+                    %></p>
+                </div>
+                <div class="new-cook-line">
+                    <p><%= f.label :Process, "-工程-" %></p>
+                    <p><%= f.text_area :Process, class:"text-field area",
+                        placeholder: "例:
+①野菜を一口大に切る
+②肉を食べやすい大きさに切る
+③油をひいて肉を焼く
+④肉を取り出して野菜を焼く
+⑤ある程度火が通ったら、☆の材料を入れて煮る
+⑥野菜が柔らかくなってきたら、肉を入れて少し煮る"
+                     %></p>
+                </div>
+                <div class="new-cook-line">
+                    <p><%= f.label :memo, "-メモ-" %></p>
+                    <p><%= f.text_area :memo, class:"text-field area",
+                        placeholder: "例:
+・しっかり煮ないとにんじんカチカチ（最低30分以上は煮る）
+・完成後味が薄かったら、醤油と塩と砂糖で調節する"
+                    %></p>
+                </div>
+                <div class="new-cook-line">
+                    <p><%= f.label :score, "-点数-" %></p>
+                    <p><%= f.number_field :score, class: "text-field", placeholder:"気持ちはいつも100点です！" %></p>
+                </div>
+                <div class="new-cook-line submit-line">
+                <%= f.hidden_field :created_at, value: Date.today %>
+                <p><%= f.submit "ご馳走様でした！", {class: "submit"} %></p>
+                </div>
+            <% end %>
+
+        </div>
+    </div>
+</div>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>CookingApp</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <header>
+      <div class="container">
+        <div class="header-title">
+          <h1><%=link_to("みなこの料理日記",cooks_path) %></h1>
+        </div>
+        <div class="resp-header-title">
+          <%= link_to(cooks_path, class:"title-link") do %>
+          <h1>みなこの<br>料理日記</h1>
+          <% end %>
+        </div>
+        <div id="header-nav-btn">
+          <span class="fa fa-bars" id="show-btn"></span>
+        </div>
+      </div>
+    </header>
+    <% if flash[:notice] %>
+      <div class="flash">
+        <%= flash[:notice] %>
+      </div>
+    <% end %>
+    <div class="header-nav">
+      <p><%= link_to("レシピ一覧", cooks_path, class:"link btn nav-btn")%><span class="fa fa-book"></span></p>
+      <p><%= link_to("お気に入り一覧", cooks_likes_path, class:"link btn nav-btn")%><span class="fa fa-heart"></span></p>
+      <p><%= link_to("レベルアップ", new_cook_path, class:"link btn nav-btn")%><span class="fa fa-level-up-alt"></span></p>
+    </div>
+    <%= yield %>
+    <footer>
+      <div class="container">
+        <h3>目指せ！100食！</h3>
+        <h3 class="total">現在：計<span><%= @count %></span>食</h3>
+      </div>
+    </footer>
+  </body>
+</html>

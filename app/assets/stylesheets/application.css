@@ -1,0 +1,437 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Hanzipen TC';
+    text-decoration: none;
+}
+
+.container {
+    padding: 0 30px;
+}
+
+.link {
+    text-decoration: none;
+}
+
+.flash {
+    text-align: center;
+    font-family: sans-serif;
+    background: pink;
+    padding: 10px;
+}
+
+.alert {
+    text-align: left;
+    padding-left: 20px;
+    padding-top: 5px;
+    color: red;
+}
+
+.alert li {
+    line-height: 25px;
+}
+/*header========================================*/
+
+header {
+    background-image: url("https://images.immediate.co.uk/production/volatile/sites/30/2020/08/batch_cooking_main_image-9144282.jpg?quality=90&resize=768,574");
+    background-size: cover;
+}
+
+.header-title {
+    text-align: center;
+    font-size: 30px;
+    color: pink;
+    padding: 10px;
+}
+
+.resp-header-title {
+    display: none;
+}
+
+.title-link {
+    text-decoration: none;
+    color: white;
+    display: inline-block;
+}
+
+.header-nav {
+    justify-content: space-between;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px;
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    z-index: 100;
+    background: #DCDCDC;
+    display: none;
+    border-radius: 5px;
+}
+
+.fa {
+    color: white;
+    margin-left: 1px;
+}
+
+.nav-btn {
+    color: black;
+}
+
+.nav-btn:hover {
+    border-bottom: 2px solid white;
+}
+
+#header-nav-btn {
+    text-align: right;
+}
+
+#header-nav-btn span {
+    display: inline-block;
+    position: absolute;
+    top: 70px;
+    right: 10px;
+    background-color: #DCDCDC;
+    padding: 20px;
+    font-size: 30px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+/*index=========================================*/
+
+.index {
+    background: #F7F7F7;
+    padding: 30px 10px 0 10px;
+}
+
+.index-wrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-flow: wrap;
+}
+
+.index-content {
+    width: 25%;
+    background: white;
+    text-align: center;
+    box-shadow: 0 2px 5px #DCDCDC;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 30px;
+    transition: 0.4s;
+}
+
+.index-content-name h2 {
+    color: black;
+}
+
+.index-content:hover {
+    transform: scale(1.05);
+    box-shadow: 0 2px 10px #BBBBBB;
+}
+
+.index-img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.index .fa {
+    color: pink;
+    margin-left: -5px;
+}
+
+
+/*new===========================================*/
+
+.new-cook, .show {
+    background: #F7F7F7;
+    padding: 20px 0;
+}
+
+.new-cook-wrapper {
+    width: 70%;
+    margin: 0 auto;
+    text-align: center;
+    background: white;
+    padding: 20px;
+    box-shadow: 0 2px 5px #DCDCDC;
+}
+
+.new-cook-line {
+    padding: 10px;
+    border-bottom: 2px solid #DCDCDC;
+}
+
+.new-cook-line p {
+    padding: 2px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.text-field {
+    width: 100%;
+    padding: 5px 7px;
+    border: 1px solid #DCDCDC;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+.area {
+    height: 200px;
+}
+
+.submit {
+    width: 100%;
+    padding: 5px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.submit-line {
+    margin-top: 10px;
+    border-bottom: initial;
+}
+
+/*show========================================*/
+
+.show-wrapper {
+    display: flex;
+    justify-content: space-around;
+    width: 80%;
+    margin: 0 auto;
+    background: white;
+    padding: 20px;
+    box-shadow: 0 2px 5px #DCDCDC;
+    text-align: initial;
+}
+
+.show-left {
+    width: 40%;
+    text-align: center;
+    border-right: 2px solid #DCDCDC;
+}
+
+.show-date {
+    text-align: left;
+    font-size: 26px;
+    padding: 10px;
+}
+
+.show-img {
+    width: 100%;
+}
+
+.show-image {
+    position: relative;
+}
+
+.show-score {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 30px;
+    color: pink;
+}
+
+.show-name h1 {
+    display: inline-block;
+    border-bottom: double 10px pink;
+    padding: 0 10px;
+}
+
+.show-right {
+    width: 60%;
+    padding: 0 10px;
+}
+
+.cooking {
+    display: flex;
+    justify-content: space-between;
+}
+
+.show-line {
+    width: 50%;
+    padding: 0 10px;
+    margin-bottom: 10px;
+}
+
+.border {
+    border-left: 2px solid #DCDCDC;
+}
+
+.show-line-title, .show-memo-title {
+    text-align: center;
+}
+
+.show-line-title h3 ,.show-memo-title h3 {
+    display: inline-block;
+    background: #DCDCDC;
+    color: white;
+    padding: 5px 20px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+.show-memo-title h3 {
+    margin-top: 10px;
+}
+
+.show-memo {
+    border-top: 2px solid #DCDCDC;
+    border-bottom: 2px solid #DCDCDC;
+    padding: 10px;
+}
+
+.edit {
+    padding-top: 10px;
+    text-align: right;
+}
+
+.update {
+    color: #DCDCDC;
+    padding: 2px;
+    text-decoration: none;
+}
+
+.update:hover {
+    color: black;
+}
+
+.edit-img {
+    width: 80%;
+}
+/*footer======================================*/
+
+footer {
+    text-align: center;
+    height: 200px;
+    background-image: url("https://mondiv.com/wp-content/themes/default-bs3/img/template/bg_footer_all.jpg");
+    background-size: cover;
+    padding-top: 10px;
+    text-align: right;
+}
+
+footer h3 {
+    font-size: 20px;
+}
+
+.total {
+    font-size: 26px;
+} 
+
+span {
+    padding: 0 5px;
+ color: pink;
+}
+
+/*レスポンシブ==================================*/
+
+@media(max-width: 1080px) {
+    .container {
+        padding: 0 15px;
+    }
+
+    .header-title {
+        display: none;
+    }
+    .resp-header-title {
+        display: block;
+        text-align: center;
+        font-size: 24px;
+        color: pink;
+        padding: 5px;
+    }
+    .new-cook-wrapper, .show-wrapper {
+        width: 100%;
+        margin: 0 auto;
+        text-align: center;
+        background: white;
+        padding: 20px;
+        box-shadow: 0 2px 5px #DCDCDC;
+    }
+
+    .index-content {
+        width: 48%;
+    }
+
+    .show-wrapper {
+        display: block;
+        width: 100%;
+    }
+
+    .show-left {
+        width: 100%;
+        text-align: center;
+        border-right: none;
+        margin-bottom: 20px;
+    }
+
+    .show-right {
+        width: 100%;
+    }
+
+    .show-line-title {
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    .index {
+        background: #F7F7F7;
+        padding: 15px 0 0 0;
+    }
+
+    .index-content {
+        margin-bottom: 15px;
+    }
+
+    .show-line-content {
+        text-align: left;
+    }
+
+    .show-wrapper {
+        padding: 5px;
+    }
+
+    .show-line {
+        padding: 0 5px;
+    }
+
+    .show-memo {
+        padding: 10px 5px;
+    }
+
+    .edit {
+        padding-top: 5px;
+    }
+
+    .show-date {
+        font-size: 20px;
+        padding: 5px;
+    }
+
+    .show-name  {
+        font-size: 12px;
+    }
+
+    .show-score {
+        font-size: 26px;
+    }
+
+}

@@ -1,0 +1,52 @@
+<div class="show">
+    <div class="container">
+        <div class="show-wrapper">
+            <div class="show-left">
+                <div class="show-date">
+                    <p><%= "作成日：#{@cook.created_at.to_s(:datetime)}" %></p>
+                </div>
+                <div class="show-image">
+                    <%= image_tag @cook.image.url, class: "show-img"%>
+                    <div class="show-score">
+                        <h2><%= "#{@cook.score}pt" %></h2>
+                    </div>
+                </div>
+                <div class="show-name">
+                    <h1><%= @cook.name %></h1>
+                </div>
+            </div>
+            <div class="show-right">
+                <div class="cooking">
+                    <div class="show-line">
+                        <div class="show-line-title">
+                            <h3>材料</h3>
+                        </div>
+                        <div class="show-line-content">
+                            <p><%= @cook.material %></p>
+                        </div>
+                    </div>
+                    <div class="show-line border">
+                        <div class="show-line-title">
+                            <h3>作り方</h3>
+                        </div>
+                        <div class="show-line-content">
+                            <p><%= @cook.Process %></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="show-memo">
+                    <div class="show-memo-title">
+                        <h3>メモ</h3>
+                    </div>
+                    <div class="show-line-content">
+                        <p><%= @cook.memo %></p>
+                    </div>
+                </div>
+                <div class="edit">
+                    <%= link_to("編集", edit_cook_path, class:"update") %>
+                    <%= link_to("削除", cook_path(@cook.id), method: :delete, data: { confirm: "本当に削除しますか？" }, class:"update") %>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

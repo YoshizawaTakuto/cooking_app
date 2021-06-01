@@ -1,0 +1,33 @@
+<div class="new-cook">
+    <div class="container">
+        <div class="new-cook-wrapper">
+            <div class="new-cook-line">
+                <%= image_tag @cook.image.url, class:"edit-img"%>
+            </div>
+            <%= form_with(model: @cook) do |f|%>
+            <%= render("shared/error_message", model: f.object)%>
+                <div class="new-cook-line">
+                    <p><%= f.label :name, "-料理名-" %></p>
+                    <p><%= f.text_field :name, class:"text-field",
+                        placeholder: "例: 肉じゃが" %></p>
+                </div>
+                <div class="new-cook-line">
+                    <p><%= f.label :material, "-材料-" %></p>
+                    <p><%= f.text_area :material, class:"text-field area" %></p>
+                </div>
+                <div class="new-cook-line">
+                    <p><%= f.label :Process, "-工程-" %></p>
+                    <p><%= f.text_area :Process, class:"text-field area" %></p>
+                </div>
+                <div class="new-cook-line">
+                    <p><%= f.label :memo, "-メモ-" %></p>
+                    <p><%= f.text_area :memo, class:"text-field area" %></p>
+                </div>
+                <div class="new-cook-line submit-line">
+                <p><%= f.submit "さらに美味しく！", {class: "submit"} %></p>
+                </div>
+            <% end %>
+
+        </div>
+    </div>
+</div>

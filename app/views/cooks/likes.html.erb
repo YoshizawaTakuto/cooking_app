@@ -1,0 +1,23 @@
+<div class="index">
+    <div class="container">
+        <div class="index-wrapper">
+          <% @cooks.each do |cook|%>
+            <div class="index-content">
+              <%= link_to(cook) do %>
+                <div class="index-content-image">
+                    <%= image_tag cook.image.url, class:"index-img"%>
+                </div>
+                <div class="index-content-name">
+                    <h2>
+                    <%= cook.name %>
+                    <% if cook.score >= 90 %>
+                      <span class="fa fa-heart"></span>
+                    <% end %>
+                    </h2>
+                </div>
+              <% end %>
+            </div>
+          <% end %>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,13 @@
+ja:
+  activerecord:
+    models:
+      cook: 料理
+    attributes:
+      cook:
+        image: 完成品
+        name: 料理名
+        material: 材料
+        Process: 作り方
+        memo: メモ
+        score: 点数
+        
